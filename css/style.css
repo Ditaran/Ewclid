@@ -420,6 +420,7 @@ html {
 .message {
 	padding-left: 24px;
 	background-color: #414141;
+	border: none;
 	border-radius: 16px;
 	/* transform: matrix(0, -1, -1, 0, 0, 0); */
 }
@@ -443,6 +444,7 @@ html {
 }
 
 .message {
+	padding-top: 14px;
 	margin-bottom: 32px;
 	width: 570px;
 	height: 150px;
