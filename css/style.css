@@ -132,7 +132,7 @@ html {
 }
 
 .header {
-	padding: 14px 75px;
+	padding: 14px 0;
 	background: #FFFFFF;
 	box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
 	border-radius: 0px 0px 32px 32px;
@@ -145,11 +145,24 @@ html {
 	margin-right: 85px;
 }
 
+.burger {
+	display: none;
+	border: none;
+	background: transparent;
+}
+
 .header__logo {
-	margin-right: 553px;
+	min-width: 150px;
+	min-height: 48px;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
 }
 
 .header__search {
+	margin-left: 260px;
 	border: none;
 	background-color: transparent;
 }
@@ -162,18 +175,9 @@ html {
 	fill: #ff9900;
 }
 
-/* .btn-search:hover svg path,
-.btn-close:hover svg circle {    stroke: #ff9900;
-}
-
-.btn-search:hover svg rect,
-.btn-close:hover svg rect {
-  fill: #ff9900;
-}  */
 /* hero ------------------- */
 
 .hero__container {
-	/* padding: 100px 0 100px 80px; */
 	left: 80px;
 	top: 100px;
 	position: absolute;
@@ -345,6 +349,17 @@ html {
 	background: transparent;
 }
 
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, .ui-button:active, 
+.ui-button.ui-state-active:hover {
+    border: 1px solid #003eff;
+    background: transparent;
+    font-weight: normal;
+    color: #ffffff;
+}
+
 .tab-content {
 	display: none;
 	margin-bottom: 30px;
@@ -378,21 +393,21 @@ html {
 
 /* FOOTER ============================================= */
 
-.footer__container {
+.footer  {
 	margin-top: 100px;
 	background-color: #000000;
 }
 
-.footer {
+.footer__container {
 	padding-top: 50px;
 	display: flex;
 	align-items: center;
-	/* justify-content: space-between; */
+	justify-content: space-between;
 	color: #CACACA;
 }
 
 .footer__left {
-	margin-right: 350px;
+	/* margin-right: 350px; */
 }
 
 .footer__logo {
@@ -409,7 +424,7 @@ html {
 }
 
 .footer__form {
-	margin-right: 236px;
+	/* margin-right: 236px; */
 	display: flex;
 	flex-direction: column;
 	border: none;
@@ -450,9 +465,81 @@ html {
 	height: 150px;
 }
 
-
 @media (max-width: 1760px) {
 	.header__search {
 		display: none;
 	}
 }
+
+/* 1024 media ============================== */
+
+@media (max-width: 1024px) {
+
+	.container {
+		max-width: 924px;
+	}
+
+	.burger {
+		display: block;
+	}
+
+	.header__logo {
+		max-width: 150px;
+		min-height: 28px;
+	}
+
+	.header__nav {
+		display: none;
+	}
+
+	.header__search {
+		display: block;
+		margin-left: 0;
+	}
+
+	.swiper {
+		margin-top: 40px;
+		margin-bottom: 35px;
+		height: 668px;
+	}
+
+	.hero__banner_1 {
+		background: url(/images/hero/low-angle-photo-of-balconies-2462015\ 1\ \(1\).jpg) center center no-repeat;
+	}
+
+	.hero__banner_2 {
+		background: url(/images//hero/hero-pic-1024-2.jpg) center center no-repeat;
+	}
+
+	.hero__banner_3 {
+		background: url(/images/hero/hero-pic-1024-3.jpg) center center no-repeat;
+	}
+
+	.about__container {
+		margin-bottom: 80px;
+	}
+
+	.about__content {
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	.about__content_left,
+	.about__content_right-block {
+		margin-bottom: 32px;
+	}
+
+	.tab__image,
+	.tab-content__left {
+		max-width: 437px;
+		height: 689px;
+	}
+
+	.footer__dscr {
+		display: none;
+	}
+
+}
+
+
