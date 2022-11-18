@@ -111,7 +111,7 @@ html {
 }
 
 .btn {
-	padding: 20px 38px;
+	padding: 19px 38px;
 	background-color: #ff9900;
 	border-radius: 16px;
 	border: none;
@@ -122,6 +122,20 @@ html {
 	color: #FFFFFF;
 }
 
+.btn:hover {
+	background-color: #FFB84D;
+
+	cursor: pointer;
+}
+
+.btn:focus {
+	background-color: #FFB84D;
+}
+
+.btn:active {
+	background-color: #E1670E;
+}
+
 /* HEADER-------------- */
 
 .header__container,
@@ -130,6 +144,8 @@ html {
 	justify-content: space-between;
 	align-items: center;
 }
+
+
 
 .header {
 	padding: 14px 0;
@@ -148,7 +164,10 @@ html {
 .burger {
 	display: none;
 	border: none;
-	background: transparent;
+	width: 30px;
+	height: 23px;
+	background: url("/images/header/burger.png");
+	cursor: pointer;
 }
 
 .header__logo {
@@ -173,6 +192,28 @@ html {
 
 .header__search:hover svg rect {
 	fill: #ff9900;
+}
+
+.header__search:focus {
+	border: 2px solid #FF9900;
+}
+
+.search-form {
+	padding: 16px 16px 16px 32px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	top: -100px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+	border-radius: 24px;
+	transition: top .5s ease-in-out;
+}
+
+.search-form__is-active {
+	top: 10px;
 }
 
 /* hero ------------------- */
@@ -276,7 +317,6 @@ html {
 }
 
 .about__btn {
-	padding: 20px 38px;
 	line-height: 19.5px;
 	background-color: transparent;
 	border: 3px solid #ff9900;
@@ -380,8 +420,30 @@ a.ui-button:active, .ui-button:active,
 	justify-content: space-between;
 }
 
-.tab__image {
+.tab__image,
+.tab__image2,
+.tab__image3,
+.tab__image4 {
+	width: 870px;
+	max-width: 870px;
+	max-height: 460px;
 	border-radius: 32px;
+}
+
+.tab__image {
+	background: url(/images/how/Rectangle\ 18.jpg) center center no-repeat;
+}
+
+.tab__image2 {
+	background: url(/images/how/Rectangle\ 19.jpg) center center no-repeat;
+}
+
+.tab__image3 {
+	background: url(/images/how/Rectangle\ 19\ \(1\).jpg) center center no-repeat;
+}
+
+.tab__image4 {
+	background: url(/images/how/Rectangle\ 20.jpg) center center no-repeat;
 }
 
 .btn-dogr {
@@ -393,7 +455,7 @@ a.ui-button:active, .ui-button:active,
 
 /* FOOTER ============================================= */
 
-.footer  {
+.footer {
 	margin-top: 100px;
 	background-color: #000000;
 }
@@ -404,10 +466,6 @@ a.ui-button:active, .ui-button:active,
 	align-items: center;
 	justify-content: space-between;
 	color: #CACACA;
-}
-
-.footer__left {
-	/* margin-right: 350px; */
 }
 
 .footer__logo {
@@ -481,6 +539,7 @@ a.ui-button:active, .ui-button:active,
 
 	.burger {
 		display: block;
+		z-index: 11;
 	}
 
 	.header__logo {
@@ -489,8 +548,35 @@ a.ui-button:active, .ui-button:active,
 	}
 
 	.header__nav {
-		display: none;
+		/* display: none; */
+		position: absolute;
+		margin: 0 0;
+		padding: 170px 106px 229px 50px;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		background-color: #FFFFFF;
+		z-index: 10;
+		color: #333333;
+		transform: translateX(-100%);
+
 	}
+
+	.is-active {
+		/* display: block; */
+		transition: transform 0.7s ease-in-out;
+		transform: none;
+	}
+
+	.burger__is-active {
+		background: url(/images/header/X.png) center center no-repeat;
+	}
+
 
 	.header__search {
 		display: block;
@@ -531,9 +617,28 @@ a.ui-button:active, .ui-button:active,
 	}
 
 	.tab__image,
+	.tab__image2,
+	.tab__image3,
+	.tab__image4,
 	.tab-content__left {
 		max-width: 437px;
-		height: 689px;
+		min-height: 689px;
+	}
+
+	.tab__image {
+		background: url(/images/how/Rectangle\ 18\ 1024.jpg) center center no-repeat;
+	}
+
+	.tab__image2 {
+		background: url(/images/how/how-pic-1024-2.jpg) center center no-repeat;
+	}
+
+	.tab__image3 {
+		background: url(/images/how/how-pic-1024-3.jpg) center center no-repeat;
+	}
+
+	.tab__image4 {
+		background: url(/images/how/how-pic-1024-4.jpg) center center no-repeat;
 	}
 
 	.footer__dscr {
@@ -541,5 +646,3 @@ a.ui-button:active, .ui-button:active,
 	}
 
 }
-
-

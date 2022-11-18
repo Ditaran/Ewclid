@@ -30,14 +30,13 @@
   <div class="site-container">
     <header class="header">
       <div class="container header__container">
-        <button class="burger">
-          <img src="/images/header/burger.png" alt="">
+        <button id="burger" class="burger">
         </button>
         <a href="" class="header__logo logo">
           <img src="/images/header/Logo.png" alt="Logo">
         </a>
         <div class="nav">
-          <ul class="header__nav">
+          <ul id="menu" class="header__nav">
             <li class="header__item">О нас</li>
             <li class="header__item">Проекты</li>
             <li class="header__item">Этапы</li>
@@ -56,6 +55,26 @@
         </div>
 
       </div>
+      <form action="" class="search-form" id="search-form">
+        <input type="text" placeholder="Что будем искать?">
+        <button class="form__btn">
+          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="7.56126" height="1.89031"
+              transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="black" />
+            <path
+              d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+              stroke="black" stroke-width="2" />
+          </svg>
+        </button>
+        <button class="form__btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="#CACACA"/>
+            <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="#CACACA"/>
+            <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2"/>
+            </svg>
+            
+        </button>
+      </form>
     </header>
     <main class="main">
       <section class="hero">
@@ -178,7 +197,7 @@
                   <button class="tab__btn btn btn-dogr btn-reset">Договор</button>
                 </div>
               </div>
-              <img src="/images/how/Rectangle 18.jpg" alt="" class="tab__image">
+              <div class="tab__image"></div>
             </div>
           </div>
           <div class="tab-content" data-target="two">
@@ -198,7 +217,7 @@
                   <button class="tab__btn btn btn-dogr btn-reset">Договор</button>
                 </div>
               </div>
-              <img src="/images/how/Rectangle 19.jpg" alt="" class="tab__image">
+              <div class="tab__image2"></div>
             </div>
           </div>
           <div class="tab-content" data-target="three">
@@ -219,7 +238,7 @@
                   <button class="tab__btn btn btn-dogr btn-reset">Договор</button>
                 </div>
               </div>
-              <img src="/images/how/Rectangle 19 (1).jpg" alt="" class="tab__image">
+              <div class="tab__image3"></div>
             </div>
           </div>
           <div class="tab-content" data-target="four">
@@ -239,7 +258,7 @@
                   <button class="tab__btn btn btn-dogr btn-reset">Договор</button>
                 </div>
               </div>
-              <img src="/images/how/Rectangle 20.jpg" alt="" class="tab__image">
+              <div class="tab__image4"></div>
             </div>
           </div>
         </div>
@@ -405,6 +424,8 @@
   </div>
   <script src="/index.js"></script>
   <script src="/tabs.js"></script>
+  <script src="/menu.js"></script>
+  <script src="/search.js"></script>i
 </body>
 
 </html>
