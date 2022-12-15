@@ -66,6 +66,7 @@
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 p {
@@ -120,12 +121,11 @@ html {
 	line-height: 19.5px;
 	text-align: center;
 	color: #FFFFFF;
+	cursor: pointer;
 }
 
 .btn:hover {
 	background-color: #FFB84D;
-
-	cursor: pointer;
 }
 
 .btn:focus {
@@ -139,11 +139,13 @@ html {
 /* HEADER-------------- */
 
 .header__container,
-.header__nav {
+.header__list {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 }
+
 
 
 
@@ -157,8 +159,27 @@ html {
 	line-height: 22px;
 }
 
+.header__list {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 22px;
+}
+
 .header__item:not(:last-child) {
 	margin-right: 85px;
+}
+
+.header__link:hover {
+	border-bottom: 2px solid #FF9900;
+}
+
+.header__link:focus {
+	border: 2px solid #FF9900;
+}
+
+.header__link:active {
+	color: #E1670E;
+	border-bottom: 2px solid;
 }
 
 .burger {
@@ -166,8 +187,13 @@ html {
 	border: none;
 	width: 30px;
 	height: 23px;
-	background: url("/images/header/burger.png");
+	background: url("/images/header/burger.png")center center no-repeat;
 	cursor: pointer;
+}
+
+.burger:focus {
+	padding: 16px;
+	border: 2px solid #FF9900;
 }
 
 .header__logo {
@@ -184,6 +210,7 @@ html {
 	margin-left: 260px;
 	border: none;
 	background-color: transparent;
+	cursor: pointer;
 }
 
 .header__search:hover svg path {
@@ -198,23 +225,55 @@ html {
 	border: 2px solid #FF9900;
 }
 
+
 .search-form {
-	padding: 16px 16px 16px 32px;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: absolute;
+	justify-content: center;
+	padding: 16px 13px;
+	position: fixed;
 	right: 0;
-	top: -100px;
 	background: #FFFFFF;
+	border-radius: 16px;
+	color: #CACACA;
+	z-index: 2;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
-	border-radius: 24px;
-	transition: top .5s ease-in-out;
+	
 }
 
-.search-form__is-active {
-	top: 10px;
+.search-form__hidden {
+	display: none;
 }
+
+
+.search-input {
+	margin-left: 32px;
+	border: none;
+	border-bottom: 1px solid;
+	width: 412px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.form__btn-close,
+.form__btn {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.form__btn-close:hover svg rect {
+	fill: #FF9900;
+}
+
+.form__btn-close:hover svg circle {
+	stroke: #FF9900;
+}
+
+
+
 
 /* hero ------------------- */
 
@@ -372,9 +431,22 @@ html {
 	line-height: 22px;
 }
 
+.tabs__btn:hover {
+	color: #ff9900;
+}
+
+.tabs__btn:focus {
+	border: 2px solid #ff9900;
+}
+
+.tabs__btn:active {
+	border: none;
+	color: #E1670E;
+}
 
 .tabs__btn-active {
-	color: #ff9900;
+	border: none;
+	color: #E1670E;
 }
 
 .tabs__item:not(:last-child) {
@@ -383,21 +455,6 @@ html {
 
 .tab__descr {
 	max-width: 758px;
-}
-
-.batage {
-	background: transparent;
-}
-
-.ui-state-active, 
-.ui-widget-content .ui-state-active, 
-.ui-widget-header .ui-state-active, 
-a.ui-button:active, .ui-button:active, 
-.ui-button.ui-state-active:hover {
-    border: 1px solid #003eff;
-    background: transparent;
-    font-weight: normal;
-    color: #ffffff;
 }
 
 .tab-content {
@@ -453,6 +510,25 @@ a.ui-button:active, .ui-button:active,
 	border: 1px solid;
 }
 
+
+/* FAQ========================= */
+
+.ui-accordion-header {
+	background-color: red;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #red;
+	background: #007fff;
+	font-weight: normal;
+	color: #ffffff;
+}
+
 /* FOOTER ============================================= */
 
 .footer {
@@ -474,6 +550,25 @@ a.ui-button:active, .ui-button:active,
 
 .footer__nav {
 	margin-bottom: 90px;
+}
+
+.footer__item {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 36px;
+}
+
+.footer__item:hover {
+	color: #FF9900;
+}
+
+.footer__item:focus {
+	border: 2px solid #FF9900;
+}
+
+.footer__item:active {
+	border: none;
+	color: #E1670E;
 }
 
 .form__title {
@@ -547,7 +642,7 @@ a.ui-button:active, .ui-button:active,
 		min-height: 28px;
 	}
 
-	.header__nav {
+	.header__list {
 		/* display: none; */
 		position: absolute;
 		margin: 0 0;
@@ -563,8 +658,8 @@ a.ui-button:active, .ui-button:active,
 		background-color: #FFFFFF;
 		z-index: 10;
 		color: #333333;
+		transition: transform 0.7s ease-in-out;
 		transform: translateX(-100%);
-
 	}
 
 	.is-active {
